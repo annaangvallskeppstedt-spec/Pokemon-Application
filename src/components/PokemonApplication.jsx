@@ -7,7 +7,7 @@ const PokemonApplication = () => {
   const [selectedUrl, setSelectedUrl] = useState("");
   const [pokemonData, setPokemonData] = useState(null);
 
-  // Fetch all 151 Pokémon on load
+  // Fetch all 151 Pokémon 
   useEffect(() => {
     const fetchList = async () => {
       const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
@@ -29,7 +29,6 @@ const PokemonApplication = () => {
     <div className="p-4">
       <h2>Pokémon Selector</h2>
 
-      {/* Dropdown */}
       <select
         className="pokemon-dropdown"
         value={selectedUrl}
@@ -43,12 +42,8 @@ const PokemonApplication = () => {
         ))}
       </select>
 
-    
       <button onClick={fetchSelectedPokemon}>Get Pokémon Info</button>
 
-
-
-     
       {pokemonData && <Pokemon data={pokemonData} />}
     </div>
   );
