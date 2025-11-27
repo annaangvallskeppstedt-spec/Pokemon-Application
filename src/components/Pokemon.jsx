@@ -10,7 +10,7 @@ const Pokemon = ({ index, data }) => {
   `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${data.id}.gif`
   || sprites.front_default;
 
-  // Update state whenever new data is passed
+  // This updates state whenever new data is passed
   useEffect(() => {
     if (data) {
       setPokemon(data);
