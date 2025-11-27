@@ -6,6 +6,8 @@ function App() {
 
   const [showPokemonApp, setShowPokemonApp]= useState(false);
   
+  // This sequence of instructions calls the PokemonApplication
+
   return (
      <div className="app-root">
 
@@ -17,7 +19,6 @@ function App() {
       {!showPokemonApp && <p className="app-subtitle">Start your Pokémon adventure by learning about the first 151 Pokémon.</p>}
 
       </header>
-
       <button onClick={() => setShowPokemonApp(!showPokemonApp)}>
         {showPokemonApp ? 'Hide' : 'Show'} Pokémon Application
       </button>
